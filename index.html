@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas y Edades</title>
+</head>
+<body>
+  
+<h1>Nombres y edades</h1>
+<table id="personas">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Juan</td>
+        <td>35</td>
+    </tr>
+<tr>
+    <td>Esperanza</td>
+    <td>7</td>
+</tr>
+<tr>
+    <td>Juan</td>
+    <td>67</td>
+</tr>
+<tr>
+    <td>Eduardo</td>
+    <td>45</td>
+</tr>
+<tr>
+    <td>Corina</td>
+    <td>68</td>
+</tr>
+<tr>
+    <td>Juan</td>
+    <td>34</td>
+</tr>
+<tr>
+    <td>Fernando</td>
+    <td>35</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+    <li> Número de personas <input type="text" name="personas" id="nPersonas">
+ </li>
+<li> Cantidad de Juan <span id="nJuan"></span>
+</li>
+<li> Promedio de edades <span id="promedio"></span>
+</li>
+<li> Cantidad mayores de edad <span id="nMayoríaEdad"></span>
+</li>
+</ul>
+
+<script>
+    //let tablaPersonas = document.getElementById("personas");
+    //let filas = tablaPersonas.getElementsByTagName("tbody")[0];//
+    //document.getElementById("nPersonas").innerText = filas.children.length;
+
+
+    //document.getElementById(nJuan).textContent=nombres.length;//
+
+    let personas = [{"name": "Juan", "edad": 35}, {"name": "Esperanza", "edad": 7}, {"name":"Juan", "edad":67}, {"name": "Eduardo", "edad": 45}, {"name": "Corina", "edad": 68}, {"name": "Juan", "edad": 34}, {"name": "Fernando", "edad": 35}]
+
+    //Contar personas
+     let numpersonas = personas.length;  
+
+    console.log(numpersonas);
+   
+    
+//Cantidad de Juan
+
+let nJuan=0;
+for (let i = 0; i < numpersonas; i++) {
+        if (personas[i].name === "Juan") {
+          nJuan++
+        }
+    }
+    console.log(nJuan)
+    
+//Promedio edades
+
+    let suma = 0;
+    for (let i = 0; i < numpersonas; i++) {
+      suma += personas[i].edad;
+    }
+    let promedio = suma / numpersonas;
+    console.log(promedio)
+
+   //Mayores de edad
+   
+   let mayoresEdad = 0;
+    for (let i = 0; i < numpersonas; i++) {
+      if (personas[i].edad >= 18) {
+        mayoresEdad++
+        }
+    }
+    console.log(mayoresEdad)
+
+
+
+
+   
+
+    //let número= document.getElementById("nPersonas");
+
+    
+
+    //function limpiarFormulario() {
+      //  document.getElementById("nombreTxt").value = "";
+        //document.getElementById("edadTxt").value = "";
+    //}
+
+    //function crearPersona() {
+      //  let nombre = document.getElementById("nombreTxt").value;
+        //let edad = document.getElementById("edadTxt").value;
+        //const persona = { "nombre": nombre, "edad": edad }
+        //personas.push(persona);
+        //mostrarPersonas();
+    //}
+
+    //function cantidadPersonas() {
+      //  return personas.length;
+    //}
+
+    //function mostrarPersonas() {
+      //  console.log("Personas", personas);
+    //}
+</script>
+
+
+</body>
+
+
+    
+    
+</body>
+</html>
